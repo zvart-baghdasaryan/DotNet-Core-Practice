@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="DotNetPractice.Algorithms/DotNetPractice.Algorithms.csproj" />
+  <Project Path="DotNetPractice.Core/DotNetPractice.Core.csproj" />
+  <Project Path="DotNetPractice.Tests/DotNetPractice.Tests.csproj" />
+</Solution>
