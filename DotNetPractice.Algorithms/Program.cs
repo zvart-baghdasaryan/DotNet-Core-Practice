@@ -1,7 +1,12 @@
-﻿using DotNetPractice.Algorithms.Strings;
+﻿using DotNetPractice.Algorithms;
 
-Console.Write("Enter String: ");
-string? input = Console.ReadLine();
-if (input != null)
-    Console.WriteLine(PalindromeChecker.IsPalindrome(input));
+Console.Write("Enter Numbers:");
+int[] numbers = Console.ReadLine()!
+    .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+    .Select(int.Parse)
+    .ToArray();
+
+int missingNumber = ArrayAlgorithms.FindMissingNumber(numbers); 
+Console.WriteLine($"Missing NUmber: {missingNumber}");
+
 
