@@ -35,6 +35,38 @@ public static class StringsAlgorithms
         return cleanedString.SequenceEqual(reversedString);
     }
 
-    //WordReverser
+     /// <summary>
+     /// Reverses the order of words in a given string sentence.
+     /// </summary>
+     public static string WordReverser(string text)
+    {
+        /*
+        string[] words = text.Split(' ');
+        string[] reverseWords = new string[words.Length];
+       for (int i = 0; i < words.Length; i++)
+        {
+            reverseWords[i] = words[words.Length - 1 - i];
+        }
+        return string.Join(" ", reverseWords);
+        */
+        return string.Join(' ', text.Split(' ').Reverse());
+    }
+
+
     //CharFinder
+    public static string CharFinder(string text)
+    {
+        Dictionary<char, int> counts = new Dictionary<char, int>();
+        foreach(char c in text)
+        {
+            if(counts.ContainsKey(c)) counts[c] ++;
+            else counts[c] = 1;
+        }
+        foreach(char c in text)
+        {
+            if(counts[c] == 1)
+                return c.ToString();
+        }
+        return "There is no no repetative char";
+    }
 }
